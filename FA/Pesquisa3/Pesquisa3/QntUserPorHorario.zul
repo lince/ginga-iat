@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="tela" title="Quantidade de telespectadores online numa determinada faixa horária" border="normal"  use="QntUserPorHorario" width="500px">
+        <hbox>
+            <datebox id="inicio" width="200px" format="dd/MM/yyyy hh:mm a" />
+            <datebox id="fim" width="200px" format="dd/MM/yyyy hh:mm a"/>
+            <button id="btnOk" label="OK" onClick="tela.update(inicio.getValue(),fim.getValue())"/>
+        </hbox>
+
+        <vbox>
+            <flashchart id="mychart" width="500" height="250"
+                        type="pie">
+            </flashchart>
+        </vbox>
+    </window>
+</zk>

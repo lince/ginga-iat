@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.DimMedia" table="dim_media" catalog="dw">
+        <id name="idDimMedia" type="java.lang.Integer">
+            <column name="idDim_Media" />
+            <generator class="identity" />
+        </id>
+        <property name="document" type="string">
+            <column name="document" length="30" />
+        </property>
+        <property name="media" type="string">
+            <column name="media" length="30" />
+        </property>
+        <property name="status" type="string">
+            <column name="status_" length="30" />
+        </property>
+        <property name="time" type="time">
+            <column name="time" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

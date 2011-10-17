@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.Iteraction" table="iteraction" catalog="dw">
+        <id name="idIteraction" type="java.lang.Integer">
+            <column name="idIteraction" />
+            <generator class="identity" />
+        </id>
+        <property name="type" type="string">
+            <column name="type_" length="30" />
+        </property>
+        <property name="volumeLevel" type="java.lang.Integer">
+            <column name="volume_level" />
+        </property>
+        <property name="volumeMute" type="java.lang.Boolean">
+            <column name="volume_mute" />
+        </property>
+        <property name="keyCode" type="string">
+            <column name="key_code" length="30" />
+        </property>
+        <property name="keyAction" type="string">
+            <column name="key_action" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

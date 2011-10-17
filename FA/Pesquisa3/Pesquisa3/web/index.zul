@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <borderlayout  height="100%">
+        <north>
+            <div style="margin: auto auto; text-align:center;">
+                <label value="GingaAyê: Ferramenta de Análise"/>
+            </div>
+        </north>
+        <center>
+            <div style="margin: 0 auto; text-align:center; padding: 10px;">
+                <div style="padding: 5px;">
+                    <window title="Selecione o DW para realizar as pesquisas" border="normal" width="180px">
+                        <hbox>
+                            <vbox>
+                                <combobox id="combo">
+                                    <comboitem label="DW 1" description="Disponível"/>
+                                    <comboitem label="DW 2" description="Indisponível"/>
+                                    <comboitem label="DW 3" description="Indisponível"/>
+                                </combobox>
+                                <button label="SELECIONAR" >
+                                    <attribute name="onClick">
+                                        if(combo.getSelectedIndex()!=-1){
+                                        if(combo.getItemAtIndex(combo.getSelectedIndex()).getDescription().equals("Disponível")){
+                                        Executions.getCurrent().sendRedirect("PesquisasDisponiveis.zul");
+                                        }else{
+                                        Messagebox.show("DW Indisponível", "Atenção!", Messagebox.OK, Messagebox.EXCLAMATION);
+                                        }}
+                                    </attribute>
+                                </button>
+                            </vbox>
+                        </hbox>
+                    </window>
+                </div>
+            </div>
+        </center>
+        <south>
+            <div style="margin: auto auto; text-align:center">
+                <label value="Projeto GingaFrEvo &amp; GingaRAP --- Autores: Eduardo Barrére e Samuel Basílio (UFJF)"/>
+            </div>
+        </south>
+    </borderlayout>
+</zk>

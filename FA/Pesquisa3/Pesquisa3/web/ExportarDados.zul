@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <borderlayout  height="100%">
+        <north>
+            <div style="margin: auto auto; text-align:center;">
+                <label value="GingaAyê: Ferramenta de Análise"/>
+            </div>
+        </north>
+        <center>
+            <div style="margin: 0 auto; text-align:center; padding: 10px;">
+                <div style="padding: 5px;">
+                    <window id="tela" title="Exportar dados" border="normal"  use="ExportarDados" width="280px">
+                        <hbox>
+                            <grid  height="400px" >
+                                <rows>
+                                    <row>
+                                        <checkbox  id="l1" label="DimData" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l2" label="DimDevice" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l3" label="DimLocation" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l4" label="DimMedia" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l5" label="DimProgram" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l6" label="DimSocialnetwork" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l7" label="DimTime" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l8" label="DimUser" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <!--<row>
+                                        <checkbox  id="l9" label="DimUserHasDimSocialnetwork" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l10" label="Iteraction" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <!--<row>
+                                        <checkbox  id="l11" label="IteractionHasDimData" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l12" label="IteractionHasDimDataId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <!--<row>
+                                        <checkbox  id="l13" label="IteractionHasDimDevice" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l14" label="IteractionHasDimDeviceId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                   <!-- <row>
+                                        <checkbox  id="l15" label="IteractionHasDimLocation" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l16" label="IteractionHasDimLocationId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <!--<row>
+                                        <checkbox  id="l17" label="IteractionHasDimMedia" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l18" label="IteractionHasDimMediaId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <!--<row>
+                                        <checkbox  id="l19" label="IteractionHasDimProgram" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l20" label="IteractionHasDimProgramId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <!--<row>
+                                        <checkbox  id="l21" label="IteractionHasDimTime" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l22" label="IteractionHasDimTimeId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                   <!-- <row>
+                                        <checkbox  id="l23" label="IteractionHasDimUser" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>-->
+                                    <row>
+                                        <checkbox  id="l24" label="IteractionHasDimUserId" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l25" label="ResourceCpu" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l26" label="ResourceHid" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l27" label="ResourceNetwork" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                    <row>
+                                        <checkbox  id="l28" label="ResourceStorage" onCheck="tela.doChecked(self.getId())"/>
+                                    </row>
+                                </rows>
+                            </grid>
+                        </hbox>
+                        <button label="Voltar"  onClick="tela.redirecionarMenu()"/>
+                        <button id="btnOk" label="OK" >
+                            <attribute name="onClick">
+                                    Filedownload.save(tela.exportar(), null);
+                            </attribute>
+                        </button>
+                    </window>
+                </div>
+            </div>
+        </center>
+        <south>
+            <div style="margin: auto auto; text-align:center">
+                <label value="Projeto GingaFrEvo &amp; GingaRAP --- Autores: Eduardo Barrére e Samuel Basílio (UFJF)"/>
+            </div>
+        </south>
+    </borderlayout>
+</zk>

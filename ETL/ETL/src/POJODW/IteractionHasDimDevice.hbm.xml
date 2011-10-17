@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.IteractionHasDimDevice" table="iteraction_has_dim_device" catalog="dw">
+        <composite-id name="id" class="POJODW.IteractionHasDimDeviceId">
+            <key-property name="iteractionIdIteraction" type="int">
+                <column name="Iteraction_idIteraction" />
+            </key-property>
+            <key-property name="dimDeviceIdDimDevice" type="int">
+                <column name="Dim_Device_idDim_Device" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

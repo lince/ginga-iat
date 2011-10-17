@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.Iteraction" table="iteraction" catalog="tvdi">
+        <id name="idIteraction" type="java.lang.Integer">
+            <column name="idIteraction" />
+            <generator class="identity" />
+        </id>
+        <property name="programIdProgram" type="int">
+            <column name="Program_idProgram" not-null="true" />
+        </property>
+        <property name="volumeIdVolume" type="int">
+            <column name="Volume_idVolume" not-null="true" />
+        </property>
+        <property name="keyIdKey" type="int">
+            <column name="Key__idKey_" not-null="true" />
+        </property>
+        <property name="watchTvIdWatchTv" type="int">
+            <column name="Watch_TV_idWatch_TV" not-null="true" />
+        </property>
+        <property name="time" type="timestamp">
+            <column name="Time" length="19" />
+        </property>
+        <property name="type" type="string">
+            <column name="Type_" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

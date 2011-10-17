@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.DimData" table="dim_data" catalog="dw">
+        <id name="idDimData" type="java.lang.Integer">
+            <column name="idDim_Data" />
+            <generator class="identity" />
+        </id>
+        <property name="dia" type="java.lang.Integer">
+            <column name="dia" />
+        </property>
+        <property name="mes" type="java.lang.Integer">
+            <column name="mes" />
+        </property>
+        <property name="ano" type="java.lang.Integer">
+            <column name="ano" />
+        </property>
+        <property name="diaSemana" type="string">
+            <column name="dia_semana" length="13" />
+        </property>
+        <property name="semana" type="java.lang.Integer">
+            <column name="semana" />
+        </property>
+        <property name="quinzena" type="java.lang.Integer">
+            <column name="quinzena" />
+        </property>
+        <property name="trimestre" type="java.lang.Integer">
+            <column name="trimestre" />
+        </property>
+        <property name="bimestre" type="java.lang.Integer">
+            <column name="bimestre" />
+        </property>
+        <property name="semestre" type="java.lang.Integer">
+            <column name="semestre" />
+        </property>
+        <property name="feriasEscolares" type="java.lang.Boolean">
+            <column name="ferias_escolares" />
+        </property>
+        <property name="feriadoNacional" type="string">
+            <column name="feriado_nacional" length="15" />
+        </property>
+        <property name="datacompleta" type="timestamp">
+            <column name="datacompleta" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

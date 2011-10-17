@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.Channel" table="channel" catalog="tvdi">
+        <id name="idChannel" type="java.lang.Integer">
+            <column name="idChannel" />
+            <generator class="identity" />
+        </id>
+        <property name="code" type="java.lang.Integer">
+            <column name="Code" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

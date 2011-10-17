@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.Head" table="head" catalog="tvdi">
+        <id name="idHead" type="java.lang.Integer">
+            <column name="idHead" />
+            <generator class="identity" />
+        </id>
+        <property name="userIdUser" type="int">
+            <column name="User__idUser" not-null="true" />
+        </property>
+        <property name="locationIdLocation" type="int">
+            <column name="Location_idLocation" not-null="true" />
+        </property>
+        <property name="watchTvIdWatchTv" type="int">
+            <column name="Watch_TV_idWatch_TV" not-null="true" />
+        </property>
+        <property name="stbDeviceIdStbDevice" type="int">
+            <column name="STB_Device_idSTB_Device" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

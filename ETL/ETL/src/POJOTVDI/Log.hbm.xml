@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.Log" table="log_" catalog="tvdi">
+        <id name="idLog" type="java.lang.Integer">
+            <column name="idLog_" />
+            <generator class="identity" />
+        </id>
+        <property name="watchTvIdWatchTv" type="int">
+            <column name="Watch_TV_idWatch_TV" not-null="true" />
+        </property>
+        <property name="logDate" type="timestamp">
+            <column name="Log_Date" length="19" />
+        </property>
+        <property name="ip" type="string">
+            <column name="ip" length="15" />
+        </property>
+        <property name="size" type="java.lang.Double">
+            <column name="Size" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

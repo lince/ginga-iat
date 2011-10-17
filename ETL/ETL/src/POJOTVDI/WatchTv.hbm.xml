@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.WatchTv" table="watch_tv" catalog="tvdi">
+        <id name="idWatchTv" type="java.lang.Integer">
+            <column name="idWatch_TV" />
+            <generator class="identity" />
+        </id>
+        <property name="countryIdCountry" type="int">
+            <column name="Country_idCountry" not-null="true" />
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="StartDate" length="19" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="EndDate" length="19" />
+        </property>
+        <property name="flagEtl" type="java.lang.Boolean">
+            <column name="FlagETL" />
+        </property>
+    </class>
+</hibernate-mapping>

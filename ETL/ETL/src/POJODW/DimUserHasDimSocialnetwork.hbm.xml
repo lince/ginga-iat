@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.DimUserHasDimSocialnetwork" table="dim_user_has_dim_socialnetwork" catalog="dw">
+        <composite-id name="id" class="POJODW.DimUserHasDimSocialnetworkId">
+            <key-property name="dimUserIdDimUser" type="int">
+                <column name="Dim_User_idDim_User" />
+            </key-property>
+            <key-property name="dimSocialNetworkIdDimSocialNetwork" type="int">
+                <column name="Dim_SocialNetwork_idDim_SocialNetwork" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

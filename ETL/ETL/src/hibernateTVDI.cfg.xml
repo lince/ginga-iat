@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/TVDI</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <mapping resource="POJOTVDI/Head.hbm.xml"/>
+    <mapping resource="POJOTVDI/Context.hbm.xml"/>
+    <mapping resource="POJOTVDI/Socialnetworkname.hbm.xml"/>
+    <mapping resource="POJOTVDI/Key.hbm.xml"/>
+    <mapping resource="POJOTVDI/Channel.hbm.xml"/>
+    <mapping resource="POJOTVDI/Resource.hbm.xml"/>
+    <mapping resource="POJOTVDI/User.hbm.xml"/>
+    <mapping resource="POJOTVDI/Socialnetwork.hbm.xml"/>
+    <mapping resource="POJOTVDI/Location.hbm.xml"/>
+    <mapping resource="POJOTVDI/Volume.hbm.xml"/>
+    <mapping resource="POJOTVDI/StbDevice.hbm.xml"/>
+    <mapping resource="POJOTVDI/Interface.hbm.xml"/>
+    <mapping resource="POJOTVDI/Program.hbm.xml"/>
+    <mapping resource="POJOTVDI/Device.hbm.xml"/>
+    <mapping resource="POJOTVDI/Country.hbm.xml"/>
+    <mapping resource="POJOTVDI/Media.hbm.xml"/>
+    <mapping resource="POJOTVDI/Meta.hbm.xml"/>
+    <mapping resource="POJOTVDI/Property.hbm.xml"/>
+    <mapping resource="POJOTVDI/WatchTv.hbm.xml"/>
+    <mapping resource="POJOTVDI/Information.hbm.xml"/>
+    <mapping resource="POJOTVDI/Document.hbm.xml"/>
+    <mapping resource="POJOTVDI/Nclstatemachine.hbm.xml"/>
+    <mapping resource="POJOTVDI/Iteraction.hbm.xml"/>
+    <mapping resource="POJOTVDI/Log.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

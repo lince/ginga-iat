@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.DimUser" table="dim_user" catalog="dw">
+        <id name="idDimUser" type="java.lang.Integer">
+            <column name="idDim_User" />
+            <generator class="identity" />
+        </id>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <property name="genre" type="string">
+            <column name="genre" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

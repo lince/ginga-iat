@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 30/06/2010 16:19:25 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="dw" name="POJODW.ResourceHid" table="resource_hid">
+    <id name="idResourceHid" type="java.lang.Integer">
+      <column name="idResource_Hid"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dimDeviceIdDimDevice" type="int">
+      <column name="Dim_Device_idDim_Device" not-null="true"/>
+    </property>
+    <property name="model" type="string">
+      <column length="30" name="model"/>
+    </property>
+    <property name="type" type="string">
+      <column length="30" name="type_"/>
+    </property>
+  </class>
+</hibernate-mapping>

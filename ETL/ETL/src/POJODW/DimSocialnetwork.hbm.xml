@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.DimSocialnetwork" table="dim_socialnetwork" catalog="dw">
+        <id name="idDimSocialNetwork" type="java.lang.Integer">
+            <column name="idDim_SocialNetwork" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

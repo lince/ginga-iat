@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <borderlayout  height="100%">
+        <north>
+            <div style="margin: auto auto; text-align:center;">
+                <label value="GingaAyê: Ferramenta de Análise"/>
+            </div>
+        </north>
+        <center>
+            <div style="margin: 0 auto; text-align:center; padding: 10px;">
+                <div style="padding: 5px;">
+                    <window id="tela" title="Quantidade de aparelhos online numa determinada faixa horária" border="normal"  use="QntUserPorHorario" width="500px">
+                        <hbox>
+                            <timebox id="inicio" width="200px" format="HH:mm:ss" onCreate="self.value = new Date()" />
+                            <timebox id="fim" width="200px" format="HH:mm:ss" onCreate="self.value = new Date()"/>
+                            <button id="btnOk" label="OK" onClick="tela.update(inicio.getValue(),fim.getValue())"/>
+                        </hbox>
+                        <vbox>
+                            <flashchart id="mychart" width="500" height="250"
+                                        type="pie">
+                            </flashchart>
+                        </vbox>
+                        <button label="Voltar"  onClick="tela.redirecionarMenu()"/>
+                    </window>
+                </div>
+            </div>
+        </center>
+        <south>
+            <div style="margin: auto auto; text-align:center">
+                <label value="Projeto GingaFrEvo &amp; GingaRAP --- Autores: Eduardo Barrére e Samuel Basílio (UFJF)"/>
+            </div>
+        </south>
+    </borderlayout>
+</zk>

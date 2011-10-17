@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 17:52:20 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJODW.DimProgram" table="dim_program" catalog="dw">
+        <id name="idDimProgram" type="java.lang.Integer">
+            <column name="idDim_Program" />
+            <generator class="identity" />
+        </id>
+        <property name="channelCode" type="java.lang.Integer">
+            <column name="channel_code" />
+        </property>
+        <property name="channelName" type="string">
+            <column name="channel_name" length="30" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="30" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <property name="genre" type="string">
+            <column name="genre" length="4" />
+        </property>
+        <property name="subgenre" type="string">
+            <column name="subgenre" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>

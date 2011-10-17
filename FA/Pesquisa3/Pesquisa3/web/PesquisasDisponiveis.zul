@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <borderlayout  height="100%">
+        <north>
+            <div style="margin: auto auto; text-align:center;">
+                <label value="GingaAyê: Ferramenta de Análise"/>
+            </div>
+        </north>
+        <center>
+            <div style="margin: 0 auto; text-align:center; padding: 10px;">
+                <div style="padding: 5px;">
+                    <window id="tela" title="Pesquisas desponíveis" border="normal" use="index" width="400px">
+                        <listbox>
+                            <listitem >
+                                <listcell id="QntUserPorData" label="Quantidade de aparelhos online em um determinado período"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorDataCanal" label="Quantidade de aparelhos online em um determinado período e em um determinado canal"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorDataCanalFDS" label="Quantidade de aparelhos online em um determinado período e em um determinado canal duranto o fim de semana"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorDataProgram" label="Quantidade de aparelhos online em um determinado período e em um determinado programa"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="AplicacoesPorData" label="Aplicações executadas em um determinado período"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorHorario" label="Quantidade de aparelhos online numa determinada faixa horária"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorHorarioFDS" label="Quantidade de aparelhos online numa determinada faixa horária durante o fim de semana"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorHorarioCanal" label="Quantidade de aparelhos online numa determinada faixa horária em um determinado canal"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="QntUserPorHorarioProgram" label="Quantidade de aparelhos online numa determinada faixa horária em um determinado programa"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="AplicacoesPorHorario" label="Aplicações executadas em uma determinada faixa horária"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+                            <listitem>
+                                <listcell id="ExportarDados" label="Exportar dados do DW"
+                                          onClick="tela.redirecionar(self.getId())"/>
+                            </listitem>
+
+                        </listbox>
+                        <!--  <grid>
+                            <rows>
+                                <row>
+                                    <label id="QntUserPorData" value="Quantidade de aparelhos online numa determinada data"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="QntUserPorDataCanal" value="Quantidade de aparelhos online numa determinada data em um determinado canal"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="QntUserPorDataProgram" value="Quantidade de aparelhos online numa determinada data em um determinado programa"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="AplicacoesPorData" value="Aplicações executadas em uma determinada data"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="QntUserPorHorario" value="Quantidade de aparelhos online numa determinada faixa horária"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+
+                                <row>
+                                    <label id="QntUserPorHorarioCanal" value="Quantidade de aparelhos online numa determinada faixa horária em um determinado canal"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="QntUserPorHorarioProgram" value="Quantidade de aparelhos online numa determinada faixa horária em um determinado programa"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="AplicacoesPorHorario" value="Aplicações executadas em uma determinada faixa horária"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                                <row>
+                                    <label id="ExportarDados" value="Exportar dados do DW"
+                                           onClick="tela.redirecionar(self.getId())"/>
+                                </row>
+                            </rows>
+                        </grid>-->
+                        <button label="Voltar"  onClick="tela.redirecionarIndex()"/>
+                    </window>
+                </div>
+            </div>
+        </center>
+        <south>
+            <div style="margin: auto auto; text-align:center">
+                <label value="Projeto GingaFrEvo &amp; GingaRAP --- Autores: Eduardo Barrére e Samuel Basílio (UFJF)"/>
+            </div>
+        </south>
+    </borderlayout>
+</zk>

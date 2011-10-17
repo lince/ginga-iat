@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.Interface" table="interface" catalog="tvdi">
+        <id name="idInterface" type="java.lang.Integer">
+            <column name="idInterface" />
+            <generator class="identity" />
+        </id>
+        <property name="mediaIdMedia" type="int">
+            <column name="Media_idMedia" not-null="true" />
+        </property>
+        <property name="id" type="string">
+            <column name="id" length="30" />
+        </property>
+        <property name="status" type="string">
+            <column name="Status_" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://ws.apache.org/axis2" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ws.apache.org/axis2">
+    <wsdl:documentation>Principal</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.apache.org/axis2">
+            <xs:element name="retornaXML">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="vet" nillable="true" type="xs:base64Binary"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="retornaXMLResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="hello">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="helloResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="helloRequest">
+        <wsdl:part name="parameters" element="ns:hello"/>
+    </wsdl:message>
+    <wsdl:message name="helloResponse">
+        <wsdl:part name="parameters" element="ns:helloResponse"/>
+    </wsdl:message>
+    <wsdl:message name="retornaXMLRequest">
+        <wsdl:part name="parameters" element="ns:retornaXML"/>
+    </wsdl:message>
+    <wsdl:message name="retornaXMLResponse">
+        <wsdl:part name="parameters" element="ns:retornaXMLResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="PrincipalPortType">
+        <wsdl:operation name="hello">
+            <wsdl:input message="ns:helloRequest" wsaw:Action="urn:hello"/>
+            <wsdl:output message="ns:helloResponse" wsaw:Action="urn:helloResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retornaXML">
+            <wsdl:input message="ns:retornaXMLRequest" wsaw:Action="urn:retornaXML"/>
+            <wsdl:output message="ns:retornaXMLResponse" wsaw:Action="urn:retornaXMLResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="PrincipalSoap11Binding" type="ns:PrincipalPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="hello">
+            <soap:operation soapAction="urn:hello" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retornaXML">
+            <soap:operation soapAction="urn:retornaXML" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PrincipalSoap12Binding" type="ns:PrincipalPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="hello">
+            <soap12:operation soapAction="urn:hello" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retornaXML">
+            <soap12:operation soapAction="urn:retornaXML" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PrincipalHttpBinding" type="ns:PrincipalPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="hello">
+            <http:operation location="Principal/hello"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="hello"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="hello"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retornaXML">
+            <http:operation location="Principal/retornaXML"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="retornaXML"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="retornaXML"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Principal">
+        <wsdl:port name="PrincipalHttpSoap11Endpoint" binding="ns:PrincipalSoap11Binding">
+            <soap:address location="http://localhost:8084/axis2/services/Principal.PrincipalHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="PrincipalHttpSoap12Endpoint" binding="ns:PrincipalSoap12Binding">
+            <soap12:address location="http://localhost:8084/axis2/services/Principal.PrincipalHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="PrincipalHttpEndpoint" binding="ns:PrincipalHttpBinding">
+            <http:address location="http://localhost:8084/axis2/services/Principal.PrincipalHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

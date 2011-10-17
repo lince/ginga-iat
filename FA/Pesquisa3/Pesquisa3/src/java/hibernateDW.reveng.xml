@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="dw"/>
+  <table-filter match-name="iteraction_has_dim_program"/>
+  <table-filter match-name="dim_user_has_dim_socialnetwork"/>
+  <table-filter match-name="dim_location"/>
+  <table-filter match-name="resource_hid"/>
+  <table-filter match-name="dim_media"/>
+  <table-filter match-name="resource_network"/>
+  <table-filter match-name="resource_cpu"/>
+  <table-filter match-name="dim_data"/>
+  <table-filter match-name="dim_socialnetwork"/>
+  <table-filter match-name="iteraction_has_dim_location"/>
+  <table-filter match-name="iteraction_has_dim_user"/>
+  <table-filter match-name="iteraction_has_dim_device"/>
+  <table-filter match-name="resource_storage"/>
+  <table-filter match-name="iteraction_has_dim_media"/>
+  <table-filter match-name="iteraction_has_dim_time"/>
+  <table-filter match-name="dim_user"/>
+  <table-filter match-name="iteraction_has_dim_data"/>
+  <table-filter match-name="iteraction"/>
+  <table-filter match-name="dim_device"/>
+  <table-filter match-name="dim_time"/>
+  <table-filter match-name="dim_program"/>
+</hibernate-reverse-engineering>

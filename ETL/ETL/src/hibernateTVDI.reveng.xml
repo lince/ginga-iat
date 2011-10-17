@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="TVDI"/>
+  <table-filter match-name="user_"/>
+  <table-filter match-name="meta"/>
+  <table-filter match-name="program"/>
+  <table-filter match-name="stb_device"/>
+  <table-filter match-name="socialnetwork"/>
+  <table-filter match-name="channel"/>
+  <table-filter match-name="watch_tv"/>
+  <table-filter match-name="resource"/>
+  <table-filter match-name="context"/>
+  <table-filter match-name="head"/>
+  <table-filter match-name="nclstatemachine"/>
+  <table-filter match-name="document"/>
+  <table-filter match-name="device"/>
+  <table-filter match-name="key_"/>
+  <table-filter match-name="information"/>
+  <table-filter match-name="iteraction"/>
+  <table-filter match-name="interface"/>
+  <table-filter match-name="socialnetworkname"/>
+  <table-filter match-name="log_"/>
+  <table-filter match-name="location"/>
+  <table-filter match-name="property"/>
+  <table-filter match-name="media"/>
+  <table-filter match-name="volume"/>
+  <table-filter match-name="country"/>
+</hibernate-reverse-engineering>

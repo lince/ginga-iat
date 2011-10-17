@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2010 09:17:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="POJOTVDI.Socialnetwork" table="socialnetwork" catalog="tvdi">
+        <id name="idSocialNetwork" type="java.lang.Integer">
+            <column name="idSocialNetwork" />
+            <generator class="identity" />
+        </id>
+        <property name="userIdUser" type="int">
+            <column name="User__idUser" not-null="true" />
+        </property>
+        <property name="socialNetWorkNameIdSocialNetWorkName" type="int">
+            <column name="SocialNetWorkName_idSocialNetWorkName" not-null="true" />
+        </property>
+        <property name="identification" type="string">
+            <column name="identification" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

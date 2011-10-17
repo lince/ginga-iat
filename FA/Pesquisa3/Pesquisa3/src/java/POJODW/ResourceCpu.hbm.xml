@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/04/2010 22:24:51 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="dw" name="POJODW.ResourceCpu" table="resource_cpu">
+    <id name="idResourceCpu" type="java.lang.Integer">
+      <column name="idResource_CPU"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dimDeviceIdDimDevice" type="int">
+      <column name="Dim_Device_idDim_Device" not-null="true"/>
+    </property>
+    <property name="model" type="string">
+      <column length="30" name="model"/>
+    </property>
+    <property name="clock" type="string">
+      <column length="30" name="clock"/>
+    </property>
+    <property name="cores" type="string">
+      <column length="30" name="cores"/>
+    </property>
+    <property name="arch" type="string">
+      <column length="30" name="arch"/>
+    </property>
+  </class>
+</hibernate-mapping>

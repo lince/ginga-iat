@@ -1,0 +1,258 @@
+﻿ 
+
+	<!--
+		Documento descrevendo as interacoes de um determinado usuario em um
+		intervalo de tempo
+	-->
+<watchTV country="Alemanha" startDate="2009-01-01 10:00:02.5"
+	endDate="2009-01-01 15:00:01.2">
+	<!--
+		Informacoes de contexto a respeito do usuario que gerou este documento
+	-->
+	<head>
+		<location zip="13566770" lat="-22.017500" long="-47.890831" />
+		<user birth="2000-08-05" genre="female" id="asdfghjkl">
+			<socialNetwork name="twitter" identification="ab16926036946170517341" />
+			<!-- Atributos opcionais, uteis para a extracao de conhecimento -->
+			<socialNetwork name="msn" identification="joaosilva" />
+		</user>
+		<device serialNumber="200635389xys" type="set-top-box" profile="fullseg">
+			<!-- Recursos disponiveis no terminal de acesso-->
+			<resources>
+				<resource type="network">
+					<information name="speed" value="1Gbps" />
+					<information name="model"
+						value="Realtek RTL8139/810x Family Fast Ethernet" />
+				</resource>
+				<resource type="storage"> <!-- Total Storage Visible to OS -->
+					<information name="total" value="100GB" />
+					<information name="free" value="10GB" />
+				</resource>
+				<resource type="cpu">
+					<information name="model" value="Intel Core 2 Duo E4567" />
+					<information name="clock" value="2.2GHz" />
+					<information name="cores" value="2" />
+					<information name="arch" value="x86" />
+				</resource>
+				<resource type="hid"> <!-- Human Interface Device -->
+					<information name="model" value="Hp Touch" />
+					<information name="type" value="tablet" />
+				</resource>
+			</resources>
+			<!--
+				Dispositivos externos acessiveis que o terminal de acesso As
+				informacoes desses dispositivos sao coletados (ex: usuario pode
+				fazer interacao atraves de um celular)
+			-->
+			<attachedDevices>
+				<device type="interaction">
+					<resources>
+						<resource type="recurso do attached">
+							<information name="informacao"/>
+						</resource>
+					</resources>
+				</device>
+
+				<device type="storage">
+
+				</device>
+				<device type="teste">
+				<resources>
+						<resource type="recurso do teste">
+							<information name="informacao teste"/>
+						</resource>
+					</resources>
+				</device>
+			</attachedDevices>
+		</device>
+	</head>
+	<!--
+		Interacoes Implicitas Usu�rio Assistindo TV normalmente, interagindo
+		com o conte�do
+	-->
+	<interaction type="channelChange" time="2009-11-21 23:01:02.5">
+		<key code="CH_UP" />
+
+		<!-- Informacoes da tabela EIT -->
+		<channel code="20" name="SporTV">
+			<program code="452" name="Bem amigos" genre="0x00" subgenre="0x00"
+				age="10">
+				<meta>Meta tags</meta>
+			</program>
+		</channel>
+		<volume level="20" mute="no" />
+
+		<!-- Maquina de estados do documento NCL apresentado-->
+		<nclStateMachine>
+			<document id="meuNCL">
+				<media id="mediaId" status="prepared" time="01:00:00">
+					<property name="interface2" value="occurring" />
+					<interface id="interface2" status="occurring" />
+				</media>
+				<context id="ctx1">
+					<media id="mediaId3" status="prepared" time="01:00:00">
+						<property name="interface1" value="occurring" />
+						<interface id="interface2" status="occurring" />
+						<interface id="interface7" status="aff" />
+						<interface id="interface4" status="aff2" />
+					</media>
+					<context id="ctx2">
+						<media id="mediaId3" status="prepared" time="01:50:00">
+							<property name="interface3" value="occurring" />
+							<property name="interface7" value="nenhum" />
+							<interface id="interface4" status="occurring" />
+						</media>
+					</context>
+				</context>
+			</document>
+		</nclStateMachine>
+	</interaction>
+
+	<interaction type="volumeChange" time="2010-12-02 10:02:12.6">
+		<key code="VOL_UP" action="volume_up" />
+		<channel code="20" name="SporTV">
+			<program code="452" name="Bem amigos" genre="0x00" subgenre="0x00"
+				age="10">
+				<meta>Meta tags</meta>
+			</program>
+		</channel>
+		<volume level="20" mute="no" />
+		<nclStateMachine>
+			<document id="meuNCL">
+				<media id="mediaId" status="prepared" time="01:00:00">
+					<property name="interface2" value="occurring" />
+					<interface id="interface2" status="occurring" />
+				</media>
+				<context id="ctx1">
+					<media id="mediaId3" status="prepared" time="01:00:00">
+						<property name="interface1" value="occurring" />
+						<interface id="interface2" status="occurring" />
+					</media>
+					<context id="ctx2">
+						<media id="mediaId3" status="prepared" time="01:00:00">
+							<property name="interface3" value="occurring" />
+							<interface id="interface4" status="occurring" />
+						</media>
+					</context>
+				</context>
+			</document>
+		</nclStateMachine>
+	</interaction>
+
+	<interaction type="volumeChange" time="2009-08-23 10:03:12.5">
+		<key code="MUTE" action="volume_mute" />
+		<channel code="20" name="SporTV">
+			<program code="452" name="Talvez amigos" genre="0x00" subgenre="0x00"
+				age="10">
+				<meta>Meta tags</meta>
+			</program>
+		</channel>
+		<volume level="20" mute="yes" />
+		<nclStateMachine>
+			<document id="meuNCL">
+				<media id="mediaId" status="prepared" time="01:00:00">
+					<property name="interface2" value="occurring" />
+					<interface id="interface2" status="occurring" />
+				</media>
+				<context id="ctx1">
+					<media id="mediaId3" status="prepared" time="01:00:00">
+						<property name="interface1" value="occurring" />
+						<interface id="interface2" status="occurring" />
+					</media>
+					<context id="ctx2">
+						<media id="mediaId3" status="prepared" time="01:00:00">
+							<property name="interface3" value="occurring" />
+							<interface id="interface4" status="occurring" />
+						</media>
+					</context>
+				</context>
+			</document>
+		</nclStateMachine>
+	</interaction>
+
+	<interaction type="volumeChange" time="2009-07-04 10:04:22.5">
+		<key code="MUTE" action="volume_unmute" />
+		<channel code="20" name="SporTV">
+			<program code="452" name="Bem amigos" genre="0x00" subgenre="0x00"
+				age="10">
+				<meta>Meta tags</meta>
+			</program>
+		</channel>
+		<volume level="20" mute="no" />
+		<nclStateMachine>
+			<document id="meuNCL">
+				<media id="mediaId" status="prepared" time="01:00:00">
+					<property name="interface2" value="occurring" />
+					<interface id="interface2" status="occurring" />
+				</media>
+				<context id="ctx1">
+					<media id="mediaId3" status="prepared" time="01:00:00">
+						<property name="interface1" value="occurring" />
+						<interface id="interface2" status="occurring" />
+					</media>
+					<context id="ctx2">
+						<media id="mediaId3" status="prepared" time="01:00:00">
+							<property name="interface3" value="occurring" />
+							<interface id="interface4" status="occurring" />
+						</media>
+					</context>
+				</context>
+			</document>
+		</nclStateMachine>
+	</interaction>
+
+	<interaction type="interaction" time="2009-06-25 10:05:32.5">
+		<!--
+			Possibilidade para captura da interacao atraves de diferentes
+			licacoes Uma aplicacao pode informar a acao que a tecla desempenhou.
+			Aumenta o valor semantico dos eventos
+		-->
+		<key code="RED" action="ncl_interaction" />
+		<channel code="20" name="SporTV2">
+			<program code="453" name="Mal amigos" genre="0x07" subgenre="0x90"
+				age="10">
+				<meta>Meta tags</meta>
+				<meta>tag meta</meta>
+			</program>
+		</channel>
+		<volume level="20" mute="no" />
+		<nclStateMachine>
+			<document id="meuNCL">
+				<media id="mediaId" status="prepared" time="01:00:00">
+					<property name="interface2" value="occurring" />
+					<interface id="interface2" status="occurring" />
+				</media>
+				<context id="ctx1">
+					<media id="mediaId3" status="prepared" time="01:00:00">
+						<property name="interface1" value="occurring" />
+						<interface id="interface2" status="occurring" />
+					</media>
+					<context id="ctx2">
+						<media id="mediaId3" status="prepared" time="01:00:00">
+							<property name="interface3" value="occurring" />
+							<interface id="interface4" status="occurring" />
+						</media>
+					</context>
+				</context>
+			</document>
+			<document id="meuNCL2">
+				<media id="mediaId2" status="prepared2" time="01:00:00">
+					<property name="interface2" value="occurring" />
+					<interface id="interface2" status="occurring" />
+				</media>
+				<context id="ctx1">
+					<media id="mediaId3" status="prepared" time="01:00:00">
+						<property name="interface1" value="occurring" />
+						<interface id="interface2" status="occurring" />
+					</media>
+					<context id="ctx2">
+						<media id="mediaId3" status="prepared" time="01:00:00">
+							<property name="interface3" value="occurring" />
+							<interface id="interface4" status="occurring" />
+						</media>
+					</context>
+				</context>
+			</document>
+		</nclStateMachine>
+	</interaction>
+</watchTV>
